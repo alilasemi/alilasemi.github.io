@@ -1,6 +1,11 @@
+from datetime import datetime
+
 AUTHOR = 'Ali Lasemi'
-SITENAME = 'Ali Lasemi'
+SITENAME = "Ali Lasemi"
+SITETITLE = "Ali Lasemi"
+SITESUBTITLE = 'Project Portfolio'
 SITEURL = ''
+
 THEME = '../pelican-themes/Flex'
 
 PATH = 'content'
@@ -16,17 +21,31 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+# Used to add additional links to the blogroll
+#LINKS = (
+#    ('wikipedia', 'https://wikipedia.org'),
+#)
+
+USE_FOLDER_AS_CATEGORY = False
+HOME_HIDE_TAGS = True
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('github', 'https://github.com/alilasemi'),
+)
+
+# TODO
+CC_LICENSE = {
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International License",
+    "version": "4.0",
+    "slug": "by-sa",
+    "language": "en_US",
+}
+COPYRIGHT_YEAR = datetime.now().year
 
 DEFAULT_PAGINATION = 10
+
+STATIC_PATHS = ['images',]
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
